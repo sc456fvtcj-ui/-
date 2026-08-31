@@ -52,34 +52,89 @@
   <div class="grid">
     <script>
       const products = [
-        "מוצר 01","מוצר 02","מוצר 03","מוצר 04","מוצר 05",
-        "מוצר 06","מוצר 07","מוצר 08","מוצר 09","מוצר 10"
+        {
+          name: "GHK-CU",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "RETATRUTIDE",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "MOTS-C",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "BPC-157",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "MELANOTAN II",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "TB-500",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "TESAMORELIN",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "IGF-1 LR3",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "KISSPEPTIN",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        },
+        {
+          name: "EPITHALON",
+          description: "מוצר למחקר. מידע טכני, מפרט ותיעוד איכות יתווספו כאן."
+        }
       ];
-      document.write(products.map((name,i)=>`
+
+      document.write(products.map((product,i)=>`
         <article class="card">
-          <a class="product-image" href="#" aria-label="${name}">
+          <a class="product-image" href="#" aria-label="${product.name}">
             <div class="bottle"><span>YOUR<br>BRAND</span></div>
             <b>תמונה ${String(i+1).padStart(2,"0")}</b>
           </a>
+
           <a class="card-body" href="#">
             <span class="num">${String(i+1).padStart(2,"0")}</span>
-            <h3>${name}</h3>
-            <p>תיאור קצר של המוצר יופיע כאן. החלף את הטקסט בתוכן שלך.</p>
+
+            <h3>${product.name}</h3>
+
+            <p>${product.description}</p>
+
             <div class="buy">
               <strong>₪00</strong>
               <span>פרטים ←</span>
             </div>
           </a>
-        </article>`).join(""));
+        </article>
+      `).join(""));
     </script>
   </div>
 </section>
 
 <section class="wrap info">
-  <div><span class="label">YOUR BRAND</span><h2>מוכנים למכור?</h2><p>החלף את הטקסטים, התמונות והמחירים בקבצים והאתר יתעדכן ב-GitHub Pages.</p></div>
+  <div>
+    <span class="label">YOUR BRAND</span>
+    <h2>מוכנים למכור?</h2>
+    <p>החלף את הטקסטים, התמונות והמחירים בקבצים והאתר יתעדכן ב-GitHub Pages.</p>
+  </div>
+
   <a class="primary" href="#products">חזרה למוצרים</a>
 </section>
 
-<footer><div class="wrap"><b>ASCEND</b><span>תבנית חנות בעמוד אחד</span></div></footer>
+<footer>
+  <div class="wrap">
+    <b>ASCEND</b>
+    <span>תבנית חנות בעמוד אחד</span>
+  </div>
+</footer>
+
 </body>
 </html>
