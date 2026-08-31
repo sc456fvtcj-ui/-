@@ -44,3 +44,10 @@ footer .wrap{height:80px;display:flex;align-items:center;justify-content:space-b
 footer b{color:#091a35;letter-spacing:3px}
 @media(max-width:800px){.hero-inner{grid-template-columns:1fr;text-align:center;padding:55px 0}.hero p{margin:0 auto 28px}.hero-product{width:290px;height:290px;margin-top:35px}.grid{grid-template-columns:1fr}.section-head{display:block}.info{display:block}}
 @media(max-width:520px){.nav{gap:10px}.nav>a:not(.logo):not(.top-btn){display:none}.top-btn{font-size:12px;padding:10px 12px}.card{grid-template-columns:1fr}.product-image{min-height:240px}.products-section{padding:45px 0}.info{padding:28px 23px}}
+
+.product-photo {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  display: block;
+}
