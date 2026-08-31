@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASCEND — חנות</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">ASCEND <small>LABS</small></a>
+    <a href="#products">המוצרים</a>
+    <a class="top-btn" href="#products">לכל המוצרים</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="label">PREMIUM COLLECTION</span>
+      <h1>הקולקציה<br><span>שלך</span></h1>
+      <p>עמוד מכירה נקי ומודרני. הוסף תמונות, שמות, מחירים ותיאורים משלך.</p>
+      <a class="primary" href="#products">לצפייה במוצרים ↓</a>
+    </div>
+    <div class="hero-product" aria-hidden="true">
+      <div class="bottle large"><span>PRODUCT</span></div>
+      <div class="round">10<br><small>מוצרים</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap products-section" id="products">
+  <div class="section-head">
+    <div><span class="label">COLLECTION</span><h2>המוצרים</h2></div>
+    <p>10 כרטיסים מוכנים לעריכה</p>
+  </div>
+
+  <div class="grid">
+    <script>
+      const products = [
+        "מוצר 01","מוצר 02","מוצר 03","מוצר 04","מוצר 05",
+        "מוצר 06","מוצר 07","מוצר 08","מוצר 09","מוצר 10"
+      ];
+      document.write(products.map((name,i)=>`
+        <article class="card">
+          <a class="product-image" href="#" aria-label="${name}">
+            <div class="bottle"><span>YOUR<br>BRAND</span></div>
+            <b>תמונה ${String(i+1).padStart(2,"0")}</b>
+          </a>
+          <a class="card-body" href="#">
+            <span class="num">${String(i+1).padStart(2,"0")}</span>
+            <h3>${name}</h3>
+            <p>תיאור קצר של המוצר יופיע כאן. החלף את הטקסט בתוכן שלך.</p>
+            <div class="buy">
+              <strong>₪00</strong>
+              <span>פרטים ←</span>
+            </div>
+          </a>
+        </article>`).join(""));
+    </script>
+  </div>
+</section>
+
+<section class="wrap info">
+  <div><span class="label">YOUR BRAND</span><h2>מוכנים למכור?</h2><p>החלף את הטקסטים, התמונות והמחירים בקבצים והאתר יתעדכן ב-GitHub Pages.</p></div>
+  <a class="primary" href="#products">חזרה למוצרים</a>
+</section>
+
+<footer><div class="wrap"><b>ASCEND</b><span>תבנית חנות בעמוד אחד</span></div></footer>
+</body>
+</html>
