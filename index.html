@@ -36,6 +36,7 @@
 .</p>
       <a class="primary" href="#products">לצפייה במוצרים ↓</a>
     </div>
+
     <div class="hero-product" aria-hidden="true">
       <div class="bottle large"><span>PRODUCT</span></div>
       <div class="round">10<br><small>מוצרים</small></div>
@@ -54,42 +55,52 @@
       const products = [
         {
           name: "GHK-CU",
+          image: "GHKCU.jpg",
           description: "פפטיד נחושת הנחקר בהקשרים של תהליכים תאיים, מטריקס חוץ־תאי, קולגן ומנגנוני תיקון רקמות."
         },
         {
           name: "RETATRUTIDE",
+          image: "product.jpg",
           description: "מולקולה הנחקרת כאגוניסט משולש לקולטנים GLP-1, GIP וגלוקגון, ובהקשר של מטבוליזם, משקל ואיזון אנרגטי."
         },
         {
           name: "MOTS-C",
+          image: "product.jpg",
           description: "פפטיד שמקורו במיטוכונדריה ונחקר בהקשר של מטבוליזם תאי, הומאוסטזיס אנרגטי ורגישות לאינסולין."
         },
         {
           name: "BPC-157",
+          image: "product.jpg",
           description: "פפטיד הנחקר במודלים מחקריים שונים, בין היתר בהקשרים של תהליכי ריפוי רקמות, מערכת העיכול וכלי הדם."
         },
         {
           name: "MELANOTAN II",
+          image: "product.jpg",
           description: "אנלוג סינתטי של הורמון הקשור למסלול המלנוקורטין, הנחקר בעיקר בהקשרים של פיגמנטציה ומנגנונים הורמונליים."
         },
         {
           name: "TB-500",
+          image: "product.jpg",
           description: "פפטיד הקשור למחקר על Thymosin Beta-4 ונחקר בהקשרים של נדידת תאים, אנגיוגנזה ותהליכים הקשורים לרקמות."
         },
         {
           name: "TESAMORELIN",
+          image: "product.jpg",
           description: "אנלוג של GHRH הנחקר בהקשר של ציר הורמון הגדילה, הפרשת GH ושינויים בהרכב רקמות השומן."
         },
         {
           name: "IGF-1 LR3",
+          image: "product.jpg",
           description: "גרסה בעלת פעילות ממושכת של IGF-1, הנחקרת בהקשרים של מסלולי גדילה, איתות תאי והתפתחות רקמות."
         },
         {
           name: "KISSPEPTIN",
+          image: "product.jpg",
           description: "פפטיד המעורב בוויסות מסלול הרבייה ההורמונלי ונחקר בהקשר של איתות GnRH, פוריות ותפקוד ציר HPG."
         },
         {
           name: "EPITHALON",
+          image: "product.jpg",
           description: "פפטיד סינתטי הנחקר במסגרת מחקרים על טלומרים, פעילות תאית ומנגנונים הקשורים להזדקנות."
         }
       ];
@@ -97,7 +108,7 @@
       document.write(products.map((product,i)=>`
         <article class="card">
           <a class="product-image" href="#" aria-label="${product.name}">
-          <img class="product-photo" src="product.jpg" alt="מוצר">
+            <img class="product-photo" src="${product.image}" alt="${product.name}">
             <b>תמונה ${String(i+1).padStart(2,"0")}</b>
           </a>
 
